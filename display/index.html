@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Availability</title>
+</head>
+<body>
+    <div id="rooms-container">
+
+    </div>
+    <script>
+        fetch('../schedules/fall.json')
+            .then(response => response.json())
+            .then(data => {
+                const roomContainer = document.getElementById('rooms-container');
+                for (const room of Object.entries(data.Rooms)){
+                    console.log(room[1]);
+                    const roomDiv = document.createElement('div');
+                    const scheduleDiv = document.createElement('div');
+                    const roomName = document.createElement('h2');
+                    roomDiv.className = "roomDiv";
+                    scheduleDiv.className = "scheduleDiv";
+                    for (const day of Object.entries(room[1])){
+                        const dayText = document.createElement('h3')
+                        dayText.innerText = day[0] + ": " + day[1];
+                        scheduleDiv.appendChild(dayText)
+                    }
+
+                    roomName.innerText = room[0];
+                    roomDiv.appendChild(roomName);
+                    roomDiv.appendChild(scheduleDiv);
+                    roomContainer.appendChild(roomDiv);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading rooms:', error);
+            });
+    </script>
+</body>
+</html>

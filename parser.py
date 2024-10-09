@@ -1,22 +1,3 @@
-"""
-- Sample format:
-{
-    "Rooms": [
-        "LH1001": {
-            "M": ["08:30 AM - 09:20 AM", ...],
-            "T": [],
-            "W": [],
-            "R": [],
-            "F": []
-        },
-    ]
-}
-
-go over each json file in courses
-go over each course
-get startTime, endTime, room, building, and day information
-check that campus is the waterloo one
-"""
 import json
 import os
 schedule = {"Rooms": {}}
