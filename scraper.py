@@ -27,7 +27,7 @@ for code in valid_codes:
     print(response.text)
     json_data = json.loads(response.text)
     if json_data["data"]:
-        with open(f"subjects/{code}.json", "w", encoding='utf-8') as file:
+        with open(f"courses/{code}.json", "w", encoding='utf-8') as file:
             json.dump(json_data, file, indent=4)
         print(f'wrote {code} data to file')
     else:
