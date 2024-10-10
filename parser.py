@@ -42,4 +42,4 @@ for file in os.listdir("fall_courses"):
                     if friday: schedule["Rooms"][location]["F"].append((class_start_time, class_end_time))
 
 with open("schedules/fall.json", "w") as file:
-    json.dump(schedule, file, indent=4)
+    json.dump(schedule, file)

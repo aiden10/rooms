@@ -1,15 +1,53 @@
 """
-Make each roomDiv collapsible
-scheduleDiv contains:
-    Create a table similar to what lettucemeet has. This will expand/collapse when clicking on the roomDiv.
-    Available times are white, occupied times are red
-    Table rows are divided into 10 minute sections, but the lines will only show every hour
-    Table columns are divided by day (Monday, Tuesday, Wednesday...)
-
-    5 columns
-    24 visible rows (one for each hour)
-
 Buttons on the top of the page to filter and view the rooms which are currently empty and those which are empty for the rest of the day
+
+Finding currently empty rooms:
+<div id="currently-empty-rooms"></div>
+    var currentDate = new Date();
+    var currentTime = new Date(currentDate.getTime());
+    var currentlyEmptyRooms = [];
+    for (const roomDiv of rooms-container){ // doing it like this so that I can access the divs
+        let name = roomDiv.roomName;
+        let roomSchedule = rooms[name]; // rooms JSON file might not be accessible and I don't want to pass it around so this might not work
+        let valid = isValidTime(roomSchedule, currentTime.hour, currentTime.minute, currentTime.day, currentTime.suffix);
+        currentlyEmptyRooms.push(roomDiv);
+    }
+    rooms-container.style.display = "none"; // hide the original room list
+    
+    var emptyRoomsDiv = document.getElementById("currently-empty-rooms");
+    for (const room in currentlyEmptyRooms){
+        emptyRoomsDiv.appendChild(room);
+    }
+
+Finding rooms which are empty for the rest of the day:
+<div id="empty-rooms"></div>
+    var currentDate = new Date();
+    var currentTime = new Date(currentDate.getTime());
+    var emptyRooms = [];
+    var timeCopy = currentTime;
+    for (const roomDiv of rooms-container){ // doing it like this so that I can access the divs
+        let name = roomDiv.roomName;
+        var roomSchedule = rooms[name];
+        var roomValid = true;
+        while (timeCopy.day === currentTime.day){
+            let valid = isValidTime(roomSchedule, timeCopy.hour, timeCopy.minute, timeCopy.day, timeCopy.suffix);
+            if (!valid){
+                roomValid = false;
+                break;
+            }
+            timeCopy.minute += 10; 
+        }
+        if (roomValid){
+            emptyRooms.push(roomDiv);
+        }
+        timeCopy = currentTime;
+    }
+    rooms-container.style.display = "none"; // hide the original room list
+    
+    var emptyRoomsDiv = document.getElementById("empty-rooms");
+    for (const room in emptyRooms){
+        emptyRoomsDiv.appendChild(room);
+    }
 
 """
 import requests
