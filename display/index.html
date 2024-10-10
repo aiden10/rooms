@@ -7,18 +7,20 @@
     <title>Room Availability</title>
 </head>
 <body>
+    <div id="filter-status">Viewing: All Rooms</div>
+    <button id="filter-currently-empty">Currently Empty Rooms</button>
+    <button id="filter-empty-rest-day">Empty for Rest of the Day</button>
     <div id="rooms-container"></div>
     <div id="currently-empty-rooms"></div>
     <div id="empty-rooms"></div>
-    <button id="filter-currently-empty">Currently Empty Rooms</button>
-    <button id="filter-empty-rest-day">Empty for Rest of the Day</button>
-
+    
     <script>
         var roomData;
         const dayDict = {0: "M", 1: "T", 2: "W", 3: "R", 4: "F"};
         const roomContainer = document.getElementById('rooms-container');
         const currentlyEmptyDiv = document.getElementById('currently-empty-rooms');
         const emptyForRestDiv = document.getElementById('empty-rooms');
+        const filterStatus = document.getElementById('filter-status');
 
         // Add functions to buttons
         document.getElementById('filter-currently-empty').addEventListener('click', function() {
@@ -33,12 +35,17 @@
             const currentDate = new Date();
             const currentTime = new Date(currentDate.getTime());
             const currentlyEmptyRooms = [];
-            emptyForRestDiv.style.display = "none";
             if (currentlyEmptyDiv.style.display === "block") {
+                filterStatus.innerText = "Viewing: All Rooms";
                 currentlyEmptyDiv.style.display = "none";
-                roomContainer.style.display = "block";  // Show original rooms again
+                roomContainer.style.display = "block";
                 return;
             }
+            filterStatus.innerText = "Viewing: Currently Empty Rooms";
+            emptyForRestDiv.style.display = "none";
+            roomContainer.style.display = "none";
+            currentlyEmptyDiv.style.display = "block";
+
             for (const roomDiv of roomContainer.children){
                 var name = roomDiv.querySelector('h2').innerText;
                 var roomSchedule = roomData[name];
@@ -80,13 +87,17 @@
             const currentDate = new Date();
             const currentTime = new Date(currentDate.getTime());
             const emptyForRestRooms = [];
-            currentlyEmptyDiv.style.display = "none";
             if (emptyForRestDiv.style.display === "block") {
+                filterStatus.innerText = "Viewing: Original Rooms";
                 emptyForRestDiv.style.display = "none";
-                roomContainer.style.display = "block";  // Show original rooms again
+                roomContainer.style.display = "block";
                 return;
             }
-
+            
+            filterStatus.innerText = "Viewing: Empty For Rest of Day Rooms";
+            currentlyEmptyDiv.style.display = "none";
+            emptyForRestDiv.style.display = "block";
+            roomContainer.style.display = "none";
             for (const roomDiv of roomContainer.children) {
                 const name = roomDiv.querySelector('h2').innerText;
                 const roomSchedule = roomData[name];
