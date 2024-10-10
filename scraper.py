@@ -8,7 +8,6 @@ scheduleDiv contains:
 
     5 columns
     24 visible rows (one for each hour)
-    1440 actual rows 
 
 Buttons on the top of the page to filter and view the rooms which are currently empty and those which are empty for the rest of the day
 
