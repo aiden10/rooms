@@ -1,0 +1,4 @@
+.roomDiv h2 {
+    cursor: pointer;
+    user-select: none;
+}

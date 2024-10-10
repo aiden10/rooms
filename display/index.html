@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Room Availability</title>
 </head>
 <body>
@@ -10,24 +11,92 @@
 
     </div>
     <script>
+        const roomContainer = document.getElementById('rooms-container');
         fetch('../schedules/fall.json')
             .then(response => response.json())
             .then(data => {
-                const roomContainer = document.getElementById('rooms-container');
                 for (const room of Object.entries(data.Rooms)){
-                    console.log(room[1]);
+                    // initialize elements and properties
                     const roomDiv = document.createElement('div');
                     const scheduleDiv = document.createElement('div');
+                    scheduleDiv.style.display = "none";
                     const roomName = document.createElement('h2');
+                    const timeTable = document.createElement('table');
                     roomDiv.className = "roomDiv";
                     scheduleDiv.className = "scheduleDiv";
+                    
+                    // Create time table headers
+                    const mondayHeader = document.createElement('th')
+                    const tuesdayHeader = document.createElement('th')
+                    const wednesdayHeader = document.createElement('th')
+                    const thursdayHeader = document.createElement('th')
+                    const fridayHeader = document.createElement('th')
+                    const timeHeader = document.createElement('th');
+                    const headerRow = document.createElement('tr');
+                    mondayHeader.innerText = "Monday";
+                    tuesdayHeader.innerText = "Tuesday";
+                    wednesdayHeader.innerText = "Wednesday";
+                    thursdayHeader.innerText = "Thursday";
+                    fridayHeader.innerText = "Friday";
+                    timeHeader.innerText = "Time";
+                    headerRow.appendChild(timeHeader);
+                    headerRow.appendChild(mondayHeader)
+                    headerRow.appendChild(tuesdayHeader)
+                    headerRow.appendChild(wednesdayHeader)
+                    headerRow.appendChild(thursdayHeader)
+                    headerRow.appendChild(fridayHeader)
+                    timeTable.appendChild(headerRow);
+
+                    // Create the rest of the table
+                    const midnight = document.createElement('tr');
+                    midnight.innerText = "12:00 AM";
+                    timeTable.appendChild(midnight);
+
+                    let suffix = "AM";
+                    var hour = 1;
+                    for (var i = 0; i < 22; i++){
+                        if (i === 11){
+                            let noon = document.createElement('tr');
+                            noon.innerText = "12:00 PM";
+                            timeTable.appendChild(noon)
+                            suffix = "PM";
+                            hour = 1;
+                        }
+                        let hourRow = document.createElement('tr');
+                        hourRow.innerText = hour + ":00 " + suffix;
+                        hour++;
+
+                        timeTable.appendChild(hourRow);
+                    }
+                    // Populate row
+                    for (var i = 1, row; row = timeTable.rows[i]; i++){
+                        for (var j = 0; j < 5; j++){
+                            let cell = document.createElement('td');
+                            cell.innerText = j;
+                            row.appendChild(cell);
+                        }
+                    }
+
                     for (const day of Object.entries(room[1])){
                         const dayText = document.createElement('h3')
                         dayText.innerText = day[0] + ": " + day[1];
                         scheduleDiv.appendChild(dayText)
                     }
-
+                    
+                    // Make room divs collapsible
+                    roomDiv.addEventListener("click", function(){
+                        roomDiv.classList.toggle("active");
+                        var content = scheduleDiv;
+                        if (content.style.display === "none"){
+                            content.style.display = "block";
+                        }
+                        else{
+                            content.style.display = "none";
+                        }
+                    });
+                    
                     roomName.innerText = room[0];
+                    scheduleDiv.appendChild(timeTable);
                     roomDiv.appendChild(roomName);
                     roomDiv.appendChild(scheduleDiv);
                     roomContainer.appendChild(roomDiv);
@@ -35,7 +104,7 @@
             })
             .catch(error => {
                 console.error('Error loading rooms:', error);
-            });
+            });        
     </script>
 </body>
 </html>

@@ -1,11 +1,17 @@
 """
-Setup some HTML and CSS to display all of this 
-Ideal features:
-    - View rooms which aren't going to be used for the rest of the day. Can go on a separate page.
-    - View all currently available rooms and how long each one will be available for. Can also go on a separate page.
-    - Scrollable section for each individual room, and each room can be clicked on to pull up its time table. This can be the homepage.
+Make each roomDiv collapsible
+scheduleDiv contains:
+    Create a table similar to what lettucemeet has. This will expand/collapse when clicking on the roomDiv.
+    Available times are white, occupied times are red
+    Table rows are divided into 10 minute sections, but the lines will only show every hour
+    Table columns are divided by day (Monday, Tuesday, Wednesday...)
 
-I think a schedule style table would be good and I can highlight the times the room is occupied in red.
+    5 columns
+    24 visible rows (one for each hour)
+    1440 actual rows 
+
+Buttons on the top of the page to filter and view the rooms which are currently empty and those which are empty for the rest of the day
+
 """
 import requests
 import json
