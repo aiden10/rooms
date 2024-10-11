@@ -21,6 +21,7 @@
         const currentlyEmptyDiv = document.getElementById('currently-empty-rooms');
         const emptyForRestDiv = document.getElementById('empty-rooms');
         const filterStatus = document.getElementById('filter-status');
+        const allRoomsDivs = [];
 
         // Add functions to buttons
         document.getElementById('filter-currently-empty').addEventListener('click', function() {
@@ -30,6 +31,17 @@
         document.getElementById('filter-empty-rest-day').addEventListener('click', function() {
             filterEmptyForRestOfDayRooms();
         });
+        function compare(a, b) {
+            const nameA = a.querySelector('h2').innerText;
+            const nameB = b.querySelector('h2').innerText;
+            if (nameA < nameB ){
+                return -1;
+            }
+            if ( nameA > nameB ){
+                return 1;
+            }
+            return 0;
+        }
 
         function filterCurrentlyEmptyRooms(){
             const currentDate = new Date();
@@ -61,12 +73,12 @@
                 var currentSuffix = currentHour >= 12 ? "PM" : "AM";
                 var valid = isValidTime(roomSchedule, currentHour, currentMinutes, dayCode, currentSuffix, true);
                 if (valid) {
-                    console.log(name);
                     currentlyEmptyRooms.push(roomDiv.cloneNode(true));
                 }
             }
             roomContainer.style.display = "none";
             currentlyEmptyDiv.innerHTML = '';
+            currentlyEmptyRooms.sort(compare);
             currentlyEmptyRooms.forEach(room => {
                 const scheduleDiv = room.querySelector('.scheduleDiv');
                 room.querySelector('h2').addEventListener("click", function(){
@@ -115,7 +127,6 @@
                     }
                     const dayCode = dayDict[currentDay - 1]
                     const currentSuffix = currentHour >= 12 ? "PM" : "AM";
-                    console.log(`hour: ${currentHour}, minute: ${currentMinutes}, day: ${dayCode}, suffix: ${currentSuffix}`);
                     const valid = isValidTime(roomSchedule, currentHour, currentMinutes, dayCode, currentSuffix, true);
                     if (!valid) {
                         roomValid = false;
@@ -126,11 +137,10 @@
                 }
 
                 if (roomValid) {
-                    console.log(name);
                     emptyForRestRooms.push(roomDiv.cloneNode(true)); // Clone to preserve original
                 }
             }
-
+            emptyForRestRooms.sort(compare);
             roomContainer.style.display = "none"; // Hide original list
             emptyForRestDiv.innerHTML = ''; // Clear previous filtered rooms
             emptyForRestRooms.forEach(room => {
@@ -191,7 +201,7 @@
             .then(response => response.json())
             .then(data => {
                 roomData = data.Rooms;
-                for (const room of Object.entries(data.Rooms)){
+                for (const room of Object.entries(roomData)){
                     
                     // initialize elements and properties
                     const roomDiv = document.createElement('div');
@@ -272,7 +282,7 @@
                             content.style.display = "none";
                         }
                     });
-                    
+                    allRoomsDivs.push(roomDiv);
                     roomName.innerText = room[0];
                     scheduleDiv.appendChild(timeTable);
                     roomDiv.appendChild(roomName);
@@ -282,7 +292,7 @@
             })
             .catch(error => {
                 console.error('Error loading rooms:', error);
-            });        
+            });
     </script>
 </body>
 </html>
