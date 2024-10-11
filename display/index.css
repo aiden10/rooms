@@ -2,3 +2,7 @@
     cursor: pointer;
     user-select: none;
 }
+
+#filter-status{
+    font-size: large;
+}

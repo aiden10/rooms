@@ -1,7 +1,10 @@
 """
 Get winter courses
 Add a search bar
-Sort alphabetically
+Improve the initial load time
+    The valid times really only need to be calculated once
+    
+73,AN,AB,AR,AF,AS,BH,BI,BU,MB,BE,CH,CL,CLIM,CS,CP,CC,CQ,KS,DATA,DH,DMJN,EC,EU,EM,EN,ES,FS,FA,FI,FR,DD,GG,GESC,GL,GM,GC,UNDC,GV,GJRC,GS,GR,HE,HS,HI,HN,HR,ID,UU,INED,IP,IT,KP,LL,LA,LY,OL,MGTA,MF,MS,MA,MX,ML,MU,MZ,NO,PP,PC,PD,PO,PS,SAFE,RE,SKRT,SC,SE,61,SK,SOJE,SY,SP,ST,XLAW,TR,TH,UX,WASC,WS,YC
 """
 import requests
 import json

@@ -1,10 +1,10 @@
 import json
 import os
 schedule = {"Rooms": {}}
-for file in os.listdir("fall_courses"):
+for file in os.listdir("winter_courses"):
     filename = os.fsdecode(file)
     if filename.endswith(".json"):
-        fn = os.path.join("fall_courses", filename)
+        fn = os.path.join("winter_courses", filename)
         with open(fn, "r") as courses_file:
             course_data = json.load(courses_file)["data"]
             for course in course_data:
@@ -41,5 +41,5 @@ for file in os.listdir("fall_courses"):
                     if thursday: schedule["Rooms"][location]["R"].append((class_start_time, class_end_time))
                     if friday: schedule["Rooms"][location]["F"].append((class_start_time, class_end_time))
 
-with open("schedules/fall.json", "w") as file:
+with open("schedules/winter.json", "w") as file:
     json.dump(schedule, file)

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Room Availability</title>
+    <title>Laurier Room Availability</title>
 </head>
 <body>
     <div id="filter-status">Viewing: All Rooms</div>
     <button id="filter-currently-empty">Currently Empty Rooms</button>
     <button id="filter-empty-rest-day">Empty for Rest of the Day</button>
-    <div id="rooms-container"></div>
-    <div id="currently-empty-rooms"></div>
-    <div id="empty-rooms"></div>
-    
+    <div id="all-rooms-container" class="room-container"></div>
+    <div id="currently-empty-rooms" class="room-container"></div>
+    <div id="empty-rooms" class="room-container"></div>
+    <p>Fall 2024</p>
     <script>
         var roomData;
         const dayDict = {0: "M", 1: "T", 2: "W", 3: "R", 4: "F"};
-        const roomContainer = document.getElementById('rooms-container');
+        const roomContainer = document.getElementById('all-rooms-container');
         const currentlyEmptyDiv = document.getElementById('currently-empty-rooms');
         const emptyForRestDiv = document.getElementById('empty-rooms');
         const filterStatus = document.getElementById('filter-status');
@@ -43,10 +43,9 @@
             return 0;
         }
 
-        function loadAllRooms(roomContainer){
+        function loadAllRooms(){
             allRoomsDivs.sort(compare);
             allRoomsDivs.forEach(room => {
-                console.log(room);
                 roomContainer.appendChild(room);
             });
         }
@@ -296,7 +295,7 @@
                     roomDiv.appendChild(scheduleDiv);
                     allRoomsDivs.push(roomDiv);
                 }
-                loadAllRooms(roomContainer);
+                loadAllRooms();
             })
             .catch(error => {
                 console.error('Error loading rooms:', error);
