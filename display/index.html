@@ -43,6 +43,14 @@
             return 0;
         }
 
+        function loadAllRooms(roomContainer){
+            allRoomsDivs.sort(compare);
+            allRoomsDivs.forEach(room => {
+                console.log(room);
+                roomContainer.appendChild(room);
+            });
+        }
+
         function filterCurrentlyEmptyRooms(){
             const currentDate = new Date();
             const currentTime = new Date(currentDate.getTime());
@@ -282,13 +290,13 @@
                             content.style.display = "none";
                         }
                     });
-                    allRoomsDivs.push(roomDiv);
                     roomName.innerText = room[0];
                     scheduleDiv.appendChild(timeTable);
                     roomDiv.appendChild(roomName);
                     roomDiv.appendChild(scheduleDiv);
-                    roomContainer.appendChild(roomDiv);
+                    allRoomsDivs.push(roomDiv);
                 }
+                loadAllRooms(roomContainer);
             })
             .catch(error => {
                 console.error('Error loading rooms:', error);
