@@ -204,7 +204,7 @@
             }
             return true;
         }
-        fetch('schedules/fall.json')
+        fetch('../schedules/fall.json')
             .then(response => response.json())
             .then(data => {
                 roomData = data.Rooms;
