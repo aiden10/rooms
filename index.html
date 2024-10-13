@@ -55,6 +55,11 @@
             const currentDate = new Date();
             const currentTime = new Date(currentDate.getTime());
             const currentlyEmptyRooms = [];
+            var currentDay = currentTime.getDay();
+            if (currentDay === 0 || currentDay === 6){
+                window.alert("Today is a weekend and all rooms should be available");
+                return;
+            }
             if (currentlyEmptyDiv.style.display === "block") {
                 filterStatus.innerText = "Viewing: All Rooms";
                 currentlyEmptyDiv.style.display = "none";
@@ -72,11 +77,6 @@
 
                 var currentHour = currentTime.getHours();
                 var currentMinutes = currentTime.getMinutes();
-                var currentDay = currentTime.getDay();
-                if (currentDay === 0 || currentDay === 6){
-                    window.alert("Today is a weekend and all rooms should be available");
-                    return;
-                }
                 const dayCode = dayDict[currentDay - 1]
                 var currentSuffix = currentHour >= 12 ? "PM" : "AM";
                 var valid = isValidTime(roomSchedule, currentHour, currentMinutes, dayCode, currentSuffix, true);
@@ -102,11 +102,16 @@
                 currentlyEmptyDiv.appendChild(room);
             });
         }
-
+        
         function filterEmptyForRestOfDayRooms(){
             const currentDate = new Date();
             const currentTime = new Date(currentDate.getTime());
             const emptyForRestRooms = [];
+            var currentDay = currentTime.getDay();
+            if (currentDay === 0 || currentDay === 6){
+                window.alert("Today is a weekend and all rooms should be available");
+                return;
+            }
             if (emptyForRestDiv.style.display === "block") {
                 filterStatus.innerText = "Viewing: All Rooms";
                 emptyForRestDiv.style.display = "none";
@@ -128,11 +133,6 @@
                 while (timeCopy.getHours() < 23) {
                     const currentHour = timeCopy.getHours();
                     const currentMinutes = timeCopy.getMinutes();
-                    var currentDay = currentTime.getDay();
-                    if (currentDay === 0 || currentDay === 6){
-                        window.alert("Today is a weekend and all rooms should be available");
-                        return;
-                    }
                     const dayCode = dayDict[currentDay - 1]
                     const currentSuffix = currentHour >= 12 ? "PM" : "AM";
                     const valid = isValidTime(roomSchedule, currentHour, currentMinutes, dayCode, currentSuffix, true);
