@@ -13,7 +13,7 @@
     <div id="all-rooms-container" class="room-container"></div>
     <div id="currently-empty-rooms" class="room-container"></div>
     <div id="empty-rooms" class="room-container"></div>
-    <p>Fall 2024</p>
+    <p>Winter 2025</p>
     <a href="https://github.com/aiden10/rooms" target="_blank">Source Code</a>
     <script>
         var roomData;
@@ -205,11 +205,11 @@
             }
             return true;
         }
-        fetch('schedules/fall.json')
+        fetch('schedules/winter.json')
             .then(response => response.json())
             .then(data => {
                 roomData = data.Rooms;
-                for (const room of Object.entries(roomData)){
+                for (const room of Object.entries(roomData)){ 
                     
                     // initialize elements and properties
                     const roomDiv = document.createElement('div');
