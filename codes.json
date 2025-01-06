@@ -1,484 +1,407 @@
-{
-    "subjects": [
-        {
-          "code": "73",
-          "description": "American Sign Language"
-        },
-        {
-          "code": "AN",
-          "description": "Anthropology"
-        },
-        {
-          "code": "AB",
-          "description": "Arabic"
-        },
-        {
-          "code": "AR",
-          "description": "Archaeology"
-        },
-        {
-          "code": "AF",
-          "description": "Arts Topic Seminar"
-        },
-        {
-          "code": "AS",
-          "description": "Astronomy"
-        },
-        {
-          "code": "BH",
-          "description": "Biological &amp; Chemical Sciences"
-        },
-        {
-          "code": "BI",
-          "description": "Biology"
-        },
-        {
-          "code": "BU",
-          "description": "Business"
-        },
-        {
-          "code": "MB",
-          "description": "Business Technology Management"
-        },
-        {
-          "code": "BE",
-          "description": "Business,Entrepreneurship&amp;Tech"
-        },
-        {
-          "code": "CH",
-          "description": "Chemistry"
-        },
-        {
-          "code": "CL",
-          "description": "Classics"
-        },
-        {
-          "code": "CLIM",
-          "description": "Climate Change"
-        },
-        {
-          "code": "CS",
-          "description": "Communication Studies"
-        },
-        {
-          "code": "CP",
-          "description": "Computer Science"
-        },
-        {
-          "code": "CC",
-          "description": "Criminology"
-        },
-        {
-          "code": "CQ",
-          "description": "Cultural Analysis &amp; Social Thy"
-        },
-        {
-          "code": "KS",
-          "description": "Cultural Studies"
-        },
-        {
-          "code": "DATA",
-          "description": "Data Science"
-        },
-        {
-          "code": "DH",
-          "description": "Digital Humanities"
-        },
-        {
-          "code": "DMJN",
-          "description": "Digital Media &amp; Journalism"
-        },
-        {
-          "code": "EC",
-          "description": "Economics"
-        },
-        {
-          "code": "EU",
-          "description": "Education"
-        },
-        {
-          "code": "EM",
-          "description": "Education Minor"
-        },
-        {
-          "code": "EN",
-          "description": "English"
-        },
-        {
-          "code": "ES",
-          "description": "Environmental Studies"
-        },
-        {
-          "code": "FS",
-          "description": "Film Studies"
-        },
-        {
-          "code": "FA",
-          "description": "Finance&amp;Accountg"
-        },
-        {
-          "code": "FI",
-          "description": "Fine Arts"
-        },
-        {
-          "code": "FR",
-          "description": "French"
-        },
-        {
-          "code": "DD",
-          "description": "Game Design &amp; Development"
-        },
-        {
-          "code": "GG",
-          "description": "Geography"
-        },
-        {
-          "code": "GESC",
-          "description": "Geography &amp; Environ Studies"
-        },
-        {
-          "code": "GL",
-          "description": "Geology"
-        },
-        {
-          "code": "GM",
-          "description": "German"
-        },
-        {
-          "code": "GC",
-          "description": "Global Citizenship"
-        },
-        {
-          "code": "UNDC",
-          "description": "Global Crime &amp; Justice"
-        },
-        {
-          "code": "GV",
-          "description": "Global Governance"
-        },
-        {
-          "code": "GJRC",
-          "description": "Global Justice, Rel &amp; Culture"
-        },
-        {
-          "code": "GS",
-          "description": "Global Studies"
-        },
-        {
-          "code": "GR",
-          "description": "Greek"
-        },
-        {
-          "code": "HE",
-          "description": "Health Science"
-        },
-        {
-          "code": "HS",
-          "description": "Health Studies"
-        },
-        {
-          "code": "HI",
-          "description": "History"
-        },
-        {
-          "code": "HN",
-          "description": "Human Biology"
-        },
-        {
-          "code": "HR",
-          "description": "Human Rights &amp; Human Diversity"
-        },
-        {
-          "code": "ID",
-          "description": "Indigenous Studies"
-        },
-        {
-          "code": "UU",
-          "description": "Interdisciplinary Studies"
-        },
-        {
-          "code": "INED",
-          "description": "International Education"
-        },
-        {
-          "code": "IP",
-          "description": "International Public Policy"
-        },
-        {
-          "code": "IT",
-          "description": "Italian"
-        },
-        {
-          "code": "KP",
-          "description": "Kinesiology &amp; Physical Ed"
-        },
-        {
-          "code": "LL",
-          "description": "Language and Literature"
-        },
-        {
-          "code": "LA",
-          "description": "Latin"
-        },
-        {
-          "code": "LY",
-          "description": "Law &amp; Society"
-        },
-        {
-          "code": "OL",
-          "description": "Leadership"
-        },
-        {
-          "code": "MGTA",
-          "description": "Management Analytics"
-        },
-        {
-          "code": "MF",
-          "description": "Master Finance"
-        },
-        {
-          "code": "MS",
-          "description": "Master Science"
-        },
-        {
-          "code": "MA",
-          "description": "Mathematics"
-        },
-        {
-          "code": "MX",
-          "description": "Media Studies"
-        },
-        {
-          "code": "ML",
-          "description": "Medieval Studies"
-        },
-        {
-          "code": "MU",
-          "description": "Music"
-        },
-        {
-          "code": "MZ",
-          "description": "Muslim Studies"
-        },
-        {
-          "code": "NO",
-          "description": "North American Studies"
-        },
-        {
-          "code": "PP",
-          "description": "Philosophy"
-        },
-        {
-          "code": "PC",
-          "description": "Physics"
-        },
-        {
-          "code": "PD",
-          "description": "Policing"
-        },
-        {
-          "code": "PO",
-          "description": "Political Science"
-        },
-        {
-          "code": "PS",
-          "description": "Psychology"
-        },
-        {
-          "code": "SAFE",
-          "description": "Public Safety"
-        },
-        {
-          "code": "RE",
-          "description": "Religion&amp;Culture"
-        },
-        {
-          "code": "SKRT",
-          "description": "Sanskrit"
-        },
-        {
-          "code": "SC",
-          "description": "Science"
-        },
-        {
-          "code": "SE",
-          "description": "Social Entrepreneurship"
-        },
-        {
-          "code": "61",
-          "description": "Social Venture Entrepreneur"
-        },
-        {
-          "code": "SK",
-          "description": "Social Work"
-        },
-        {
-          "code": "SOJE",
-          "description": "Social and Environ Justice"
-        },
-        {
-          "code": "SY",
-          "description": "Sociology"
-        },
-        {
-          "code": "SP",
-          "description": "Spanish"
-        },
-        {
-          "code": "ST",
-          "description": "Statistics"
-        },
-        {
-          "code": "XLAW",
-          "description": "Sussex Law"
-        },
-        {
-          "code": "TR",
-          "description": "Theatre"
-        },
-        {
-          "code": "TH",
-          "description": "Theology"
-        },
-        {
-          "code": "36",
-          "description": "UW-Actuarial Science"
-        },
-        {
-          "code": "AP",
-          "description": "UW-Applied Mathematics"
-        },
-        {
-          "code": "CF",
-          "description": "UW-Chinese"
-        },
-        {
-          "code": "04",
-          "description": "UW-Combinatorics&amp;Opt"
-        },
-        {
-          "code": "81",
-          "description": "UW-Communication Studies"
-        },
-        {
-          "code": "05",
-          "description": "UW-Computer Science"
-        },
-        {
-          "code": "79",
-          "description": "UW-Digital Arts Communication"
-        },
-        {
-          "code": "32",
-          "description": "UW-Dutch"
-        },
-        {
-          "code": "08",
-          "description": "UW-Earth Sciences"
-        },
-        {
-          "code": "46",
-          "description": "UW-East Asian Culture"
-        },
-        {
-          "code": "EL",
-          "description": "UW-English as Second Language"
-        },
-        {
-          "code": "59",
-          "description": "UW-English for Multilingual Sp"
-        },
-        {
-          "code": "09",
-          "description": "UW-Environmental St"
-        },
-        {
-          "code": "78",
-          "description": "UW-Health"
-        },
-        {
-          "code": "JA",
-          "description": "UW-Japanese"
-        },
-        {
-          "code": "54",
-          "description": "UW-Knowledge Integration"
-        },
-        {
-          "code": "KO",
-          "description": "UW-Korean"
-        },
-        {
-          "code": "15",
-          "description": "UW-Management Science"
-        },
-        {
-          "code": "25",
-          "description": "UW-Math Electives"
-        },
-        {
-          "code": "MW",
-          "description": "UW-Mathematical Business"
-        },
-        {
-          "code": "74",
-          "description": "UW-Mgmt Sciences &amp; Engineering"
-        },
-        {
-          "code": "34",
-          "description": "UW-Peace&amp;Conflict Studies"
-        },
-        {
-          "code": "51",
-          "description": "UW-Public Health Science"
-        },
-        {
-          "code": "PM",
-          "description": "UW-Pure Mathematics"
-        },
-        {
-          "code": "85",
-          "description": "UW-Quantum Info &amp; Computation"
-        },
-        {
-          "code": "17",
-          "description": "UW-Recreation"
-        },
-        {
-          "code": "18",
-          "description": "UW-Religious Studies"
-        },
-        {
-          "code": "53",
-          "description": "UW-Social Development Studies"
-        },
-        {
-          "code": "SM",
-          "description": "UW-Speech Communication"
-        },
-        {
-          "code": "20",
-          "description": "UW-Statistics"
-        },
-        {
-          "code": "52",
-          "description": "UW-Studies in Islam"
-        },
-        {
-          "code": "UX",
-          "description": "User Experience Design"
-        },
-        {
-          "code": "WASC",
-          "description": "Water Science"
-        },
-        {
-          "code": "WS",
-          "description": "Women&#39;s Studies"
-        },
-        {
-          "code": "YC",
-          "description": "Youth and Children Studies"
-        }
-      ]
-}
+
+[
+  {
+    "code": "AN",
+    "description": "Anthropology"
+  },
+  {
+    "code": "AB",
+    "description": "Arabic"
+  },
+  {
+    "code": "AR",
+    "description": "Archaeology"
+  },
+  {
+    "code": "AF",
+    "description": "Arts Topic Seminar"
+  },
+  {
+    "code": "AS",
+    "description": "Astronomy"
+  },
+  {
+    "code": "BH",
+    "description": "Biological &amp; Chemical Sciences"
+  },
+  {
+    "code": "BI",
+    "description": "Biology"
+  },
+  {
+    "code": "BU",
+    "description": "Business"
+  },
+  {
+    "code": "MB",
+    "description": "Business Technology Management"
+  },
+  {
+    "code": "BE",
+    "description": "Business,Entrepreneurship&amp;Tech"
+  },
+  {
+    "code": "CH",
+    "description": "Chemistry"
+  },
+  {
+    "code": "CL",
+    "description": "Classics"
+  },
+  {
+    "code": "CLIM",
+    "description": "Climate Change"
+  },
+  {
+    "code": "30",
+    "description": "Commerce"
+  },
+  {
+    "code": "CS",
+    "description": "Communication Studies"
+  },
+  {
+    "code": "CP",
+    "description": "Computer Science"
+  },
+  {
+    "code": "CC",
+    "description": "Criminology"
+  },
+  {
+    "code": "CQ",
+    "description": "Cultural Analysis &amp; Social Thy"
+  },
+  {
+    "code": "KS",
+    "description": "Cultural Studies"
+  },
+  {
+    "code": "DATA",
+    "description": "Data Science"
+  },
+  {
+    "code": "DH",
+    "description": "Digital Humanities"
+  },
+  {
+    "code": "DMJN",
+    "description": "Digital Media &amp; Journalism"
+  },
+  {
+    "code": "EC",
+    "description": "Economics"
+  },
+  {
+    "code": "EU",
+    "description": "Education"
+  },
+  {
+    "code": "EM",
+    "description": "Education Minor"
+  },
+  {
+    "code": "EN",
+    "description": "English"
+  },
+  {
+    "code": "ENTR",
+    "description": "Entrepreneurship Core"
+  },
+  {
+    "code": "ES",
+    "description": "Environmental Studies"
+  },
+  {
+    "code": "FS",
+    "description": "Film Studies"
+  },
+  {
+    "code": "FA",
+    "description": "Finance&amp;Accountg"
+  },
+  {
+    "code": "FI",
+    "description": "Fine Arts"
+  },
+  {
+    "code": "FR",
+    "description": "French"
+  },
+  {
+    "code": "DD",
+    "description": "Game Design &amp; Development"
+  },
+  {
+    "code": "GG",
+    "description": "Geography"
+  },
+  {
+    "code": "GESC",
+    "description": "Geography &amp; Environ Studies"
+  },
+  {
+    "code": "GL",
+    "description": "Geology"
+  },
+  {
+    "code": "GM",
+    "description": "German"
+  },
+  {
+    "code": "GC",
+    "description": "Global Citizenship"
+  },
+  {
+    "code": "UNDC",
+    "description": "Global Crime &amp; Justice"
+  },
+  {
+    "code": "GV",
+    "description": "Global Governance"
+  },
+  {
+    "code": "GJRC",
+    "description": "Global Justice, Rel &amp; Culture"
+  },
+  {
+    "code": "GS",
+    "description": "Global Studies"
+  },
+  {
+    "code": "GR",
+    "description": "Greek"
+  },
+  {
+    "code": "HE",
+    "description": "Health Science"
+  },
+  {
+    "code": "HS",
+    "description": "Health Studies"
+  },
+  {
+    "code": "HP",
+    "description": "Hist &amp; Philosophy of Science"
+  },
+  {
+    "code": "HI",
+    "description": "History"
+  },
+  {
+    "code": "HN",
+    "description": "Human Biology"
+  },
+  {
+    "code": "HR",
+    "description": "Human Rights &amp; Human Diversity"
+  },
+  {
+    "code": "ID",
+    "description": "Indigenous Studies"
+  },
+  {
+    "code": "UU",
+    "description": "Interdisciplinary Studies"
+  },
+  {
+    "code": "ISHS",
+    "description": "Interdisciplinary Studies: HS"
+  },
+  {
+    "code": "INED",
+    "description": "International Education"
+  },
+  {
+    "code": "IP",
+    "description": "International Public Policy"
+  },
+  {
+    "code": "IT",
+    "description": "Italian"
+  },
+  {
+    "code": "KP",
+    "description": "Kinesiology &amp; Physical Ed"
+  },
+  {
+    "code": "LL",
+    "description": "Language and Literature"
+  },
+  {
+    "code": "LY",
+    "description": "Law &amp; Society"
+  },
+  {
+    "code": "OL",
+    "description": "Leadership"
+  },
+  {
+    "code": "MGTA",
+    "description": "Management Analytics"
+  },
+  {
+    "code": "MF",
+    "description": "Master Finance"
+  },
+  {
+    "code": "MS",
+    "description": "Master Science"
+  },
+  {
+    "code": "MA",
+    "description": "Mathematics"
+  },
+  {
+    "code": "ML",
+    "description": "Medieval Studies"
+  },
+  {
+    "code": "MU",
+    "description": "Music"
+  },
+  {
+    "code": "MZ",
+    "description": "Muslim Studies"
+  },
+  {
+    "code": "NO",
+    "description": "North American Studies"
+  },
+  {
+    "code": "PP",
+    "description": "Philosophy"
+  },
+  {
+    "code": "PC",
+    "description": "Physics"
+  },
+  {
+    "code": "PD",
+    "description": "Policing"
+  },
+  {
+    "code": "PO",
+    "description": "Political Science"
+  },
+  {
+    "code": "PS",
+    "description": "Psychology"
+  },
+  {
+    "code": "SAFE",
+    "description": "Public Safety"
+  },
+  {
+    "code": "RE",
+    "description": "Religion&amp;Culture"
+  },
+  {
+    "code": "SC",
+    "description": "Science"
+  },
+  {
+    "code": "SE",
+    "description": "Social Entrepreneurship"
+  },
+  {
+    "code": "SK",
+    "description": "Social Work"
+  },
+  {
+    "code": "SOJE",
+    "description": "Social and Environ Justice"
+  },
+  {
+    "code": "SY",
+    "description": "Sociology"
+  },
+  {
+    "code": "SP",
+    "description": "Spanish"
+  },
+  {
+    "code": "ST",
+    "description": "Statistics"
+  },
+  {
+    "code": "TH",
+    "description": "Theology"
+  },
+  {
+    "code": "36",
+    "description": "UW-Actuarial Science"
+  },
+  {
+    "code": "AP",
+    "description": "UW-Applied Mathematics"
+  },
+  {
+    "code": "CF",
+    "description": "UW-Chinese"
+  },
+  {
+    "code": "04",
+    "description": "UW-Combinatorics&amp;Opt"
+  },
+  {
+    "code": "81",
+    "description": "UW-Communication Studies"
+  },
+  {
+    "code": "CX",
+    "description": "UW-Computational Mathematics"
+  },
+  {
+    "code": "05",
+    "description": "UW-Computer Science"
+  },
+  {
+    "code": "79",
+    "description": "UW-Digital Arts Communication"
+  },
+  {
+    "code": "JA",
+    "description": "UW-Japanese"
+  },
+  {
+    "code": "KO",
+    "description": "UW-Korean"
+  },
+  {
+    "code": "MW",
+    "description": "UW-Mathematical Business"
+  },
+  {
+    "code": "PM",
+    "description": "UW-Pure Mathematics"
+  },
+  {
+    "code": "17",
+    "description": "UW-Recreation"
+  },
+  {
+    "code": "RN",
+    "description": "UW-Russian&amp;East European Std"
+  },
+  {
+    "code": "20",
+    "description": "UW-Statistics"
+  },
+  {
+    "code": "UX",
+    "description": "User Experience Design"
+  },
+  {
+    "code": "WASC",
+    "description": "Water Science"
+  },
+  {
+    "code": "WS",
+    "description": "Women&#39;s Studies"
+  },
+  {
+    "code": "YC",
+    "description": "Youth and Children Studies"
+  }
+]

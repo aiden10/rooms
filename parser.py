@@ -31,7 +31,9 @@ for file in os.listdir("winter_courses"):
                     thursday = meeting_time["thursday"]
                     friday = meeting_time["friday"]
 
-                if building and room and building != 'VIRTUAL' and 'Brant' not in campus and 'Milton' not in building and 'Kitchener' not in building:
+                # Filter unnecessary rooms and other campuses 
+                if (building and room and not any(f in building for f in ['VIRTUAL', 'Brantford Grand River Hall', 'Brant: 97 Dalhousie', 'Regina', 'King', 'LODGE', 'Athletic', 'Academy', 'CHAPEL', 'OFF CAMPUS', 'Stadium', 'Auditorium']) 
+                    and campus != 'Brantford' and 'Milton' not in building and 'Kitchener' not in building):
                     location = f'{building} {room}'
                     if location not in schedule["Rooms"]:
                         schedule["Rooms"].update({location: {"M": [],"T": [],"W": [],"R": [],"F": []}})
